@@ -1,6 +1,7 @@
 const campCost = 2000;
 let totalCost = 0;
-let paymentType = prompt('Por favor elija un metodo de pago. "tc" para tarjeta de credito "ef" para efectivo o "tf" para transferencia');
+let paymentType = prompt('Por favor elija un metodo de pago. "tc" para tarjeta de credito, "ef" para efectivo, "tf" para transferencia o "salir" para cerrar la calculadora');
+
 
 const calculateTotal = () => {
     let childQuantity = parseInt(prompt('Cuantos hijos te gustaria enviar al campamento?'));
@@ -16,9 +17,12 @@ const calculateTotal = () => {
 
 }
 
-if(paymentType === 'tc'){
-    alert('En este caso no contas con descuento');
-}else if(paymentType === 'ef' || paymentType === 'tf'){
-    calculateTotal();
+while(paymentType != 'salir'){
+    if(paymentType == 'ef' || paymentType == 'tf'){
+        calculateTotal();
+    } else {
+        alert('En este caso no contas con descuento');
+    }
+    paymentType = prompt('Por favor elija un metodo de pago. "tc" para tarjeta de credito, "ef" para efectivo, "tf" para transferencia o "salir" para cerrar la calculadora');
 }
 
