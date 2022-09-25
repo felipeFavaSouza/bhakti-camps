@@ -1,3 +1,5 @@
+// Calculadora de costo x cantidad de hijos y metodo de pago. 
+
 const campCost = 2000;
 let totalCost = 0;
 let paymentType = prompt('Por favor elija un metodo de pago. "tc" para tarjeta de credito, "ef" para efectivo, "tf" para transferencia o "salir" para cerrar la calculadora');
