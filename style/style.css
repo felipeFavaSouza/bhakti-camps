@@ -55,6 +55,11 @@ nav {
 
 .nav-link {
     color: #F6F6F8;
+	font-size: 17px;
+}
+
+.nav-link:hover {
+	color: #57D9A6;
 }
 
 .logo-img {
@@ -75,4 +80,137 @@ nav {
     margin: 0.2rem;
     max-width: 24px;
     max-height: 24px;
+}
+
+.social-media img:hover {
+	transform: scale(1.25);
+}
+
+/* Hero styling */
+
+.hero {
+	display: flex;
+	flex-direction: row;
+}
+
+.left-hero-section h2 {
+	color: #F6F6F8;
+	border-bottom: 1px solid #57D9A6;
+	padding-bottom: 0.5rem;
+	margin-top: 4rem;
+	width: 20%;
+	text-align: center;
+}
+
+.left-hero-section h1 {
+	color: #F6F6F8;
+	font-size: 30px;
+	margin-top: 2rem;
+}
+
+.left-hero-section p {
+	color: #F6F6F8;
+	margin: 2rem 0 2rem 0;
+	font-size: 15px;
+}
+
+.btn-main-style {
+	width: 149px;
+	height: 51px;
+	border-radius: 10px 10px 10px 10px;
+	background-color: #57D9A6;
+	border-color: #57D9A6;
+}
+
+.btn-main-style a {
+	text-decoration: none;
+	color: #1C1C33;
+}
+
+.right-hero-section {
+	display: flex;
+}
+
+/* .overlay{
+	margin: 4rem 0 0 5rem;
+	background-color: #57D9A6;
+	border-radius: 0 233px 233px 249px;
+} */
+
+
+.overlay img {
+	border-radius: 0 233px 233px 249px;
+	padding: 0 1.5rem 1.5rem 0;
+	margin: 2rem 1.5rem 0 4rem;
+	box-shadow: rgba(255, 255, 255, 0.15);
+}
+
+/* Upcoming events */
+
+.subtitle-main-style {
+	color: #F6F6F8;
+	border-bottom: 1px solid #57D9A6;
+	width: 250px;
+	text-align: center;
+	margin: 2rem 0 0 40%;
+	padding-bottom: 0.5rem;
+	font-size: 20px;
+}
+
+.events {
+	display: flex;
+	flex-direction: row;
+	gap: 1rem;
+	margin-top: 3rem;
+	
+}
+
+.new-event {
+	width: 414px;
+	height: 576px;
+	background-color: #F6F6F8;
+	color: #1C1C33;
+	border-radius: 15px 15px 15px 15px;
+}
+
+.new-event img{
+	width: 414px;
+	height: 239px;
+	border-radius: 15px 15px 0 0;
+}
+
+.new-event p {
+	margin-top: 1.5rem;
+	padding: 0.8em;
+}
+
+.new-event button {
+	margin: 5rem 0 0 7rem;
+}
+
+/* testimonials style */
+
+.testimonials-div {
+	display: flex;
+	flex-direction: row;
+	gap: 1rem;
+	margin-top: 3rem;
+}
+
+.testimonials {
+	width: 310px;
+	height: 350px;
+	background-color: #57D9A6;
+	border-radius: 10px 10px 10px 10px;
+}
+
+.testimonials p {
+	padding: 0.5em;
+	margin-top: 3rem;
+}
+/* Footer styling */
+
+footer h2 {
+	color: #F6F6F8;
+	margin-top: 3rem;
 }
