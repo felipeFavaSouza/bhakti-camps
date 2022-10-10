@@ -51,21 +51,8 @@ const newParticipant = () => {
     let nuevoParticipante = new Participant(nombre, edad, pais, ciudad, metodoPago, transporte);
     allParticipants.push(nuevoParticipante);
 
-    return nuevoParticipante; 
-}
+    return nuevoParticipante;
 
-const calculateTotal = () => {
-    if(participante.transportationAssist == 'si' && participante.paymentType == 'tc'){
-        totalCost = campCost + transportServices * 1.15; 
-    }else if(participante.transportationAssist == 'si' && participante.paymentType == 'td') {
-        totalCost = campCost + transportServices; 
-    }else if(participante.transportationAssist == 'si' && participante.paymentType == 'tr') {
-        totalCost = campCost + transportServices; 
-    }else if(participante.transportationAssist == 'no' && participante.paymentType == 'tc') {
-        totalCost = campCost * 1.15; 
-    }else {
-        totalCost = campCost; 
-    }
 }
 
 
