@@ -13,9 +13,9 @@ class Participant {
     }
     viewParticipant() {
         if(this.transportationAssist == 'si'){
-            alert(`Recibimos el registro de Nombre: ${this.name} Edad: ${this.age} Pais: ${this.country} Ciudad: ${this.city} Metodo Pago: ${this.paymentType}. Nuestro Equipo va ayudarlos con el transporte`); 
+            return `Recibimos el registro de Nombre: ${this.name} Edad: ${this.age} Pais: ${this.country} Ciudad: ${this.city} Metodo Pago: ${this.paymentType}. Nuestro Equipo va ayudarlos con el transporte`; 
         } else {
-            alert(`Recibimos el registro de Nombre: ${this.name} Edad: ${this.age} Pais: ${this.country} Ciudad: ${this.city} Metodo Pago: ${this.paymentType}. Los padres se hacen cargo del transporte`);
+            return `Recibimos el registro de Nombre: ${this.name} Edad: ${this.age} Pais: ${this.country} Ciudad: ${this.city} Metodo Pago: ${this.paymentType}. Los padres se hacen cargo del transporte`;
         }
     }
     calculateTotal(){
@@ -29,7 +29,7 @@ class Participant {
         }else if(this.transportationAssist == 'no' && this.paymentType == 'tc') {
             totalCost = `El costo total es $${campCost * 1.15} incluye el recargo de 15% por pago con TC`; 
         }else {
-            totalCost = campCost; 
+            totalCost = `El costo total es $${campCost}`; 
         }
         return totalCost;
     }
