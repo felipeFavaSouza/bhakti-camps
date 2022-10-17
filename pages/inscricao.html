@@ -64,13 +64,67 @@
 
         <main>
 
+            <h2 class="subtitle-main-style">Formulario de Inscripcion</h2>
+            <form action="" class="registration-form container">
+                <div class="registration-div">
+                    <label for="nombre">Nombre completo:</label>
+                    <input type="text" name="nombre" id="nombre" size="40" required>
+                </div>
+                <div class="registration-div">
+                    <label for="email">E-mail:</label>
+                    <input type="email" name="email" id="email" size="40" required>
+                </div>
+                <div class="registration-div">
+                    <label for="pais">Pais:</label>
+                    <select name="pais" id="pais" required>
+                        <option value="#">--</option>
+                        <option value="Argentina">Argentina</option>
+                        <option value="Brasil">Brasil</option>
+                        <option value="Bolivia">Bolivia</option>
+                        <option value="Chile">Chile</option>
+                        <option value="Colombia">Colombia</option>
+                        <option value="Paraguay">Paraguay</option>
+                        <option value="Uruguay">Uruguay</option>
+                    </select>
+                </div>
+                <div class="registration-div">
+                    <label for="ciudad">Ciudad:</label>
+                    <input type="text" name="ciudad" id="ciudad" size="20" required>
+                </div>
+                <div class="registration-div">
+                    <label for="edad">Edad:</label>
+                    <input type="number" name="edad" id="edad" size="10" required>
+                </div>
+                <div class="registration-div">
+                    <label for="transporte">Necesitara ayuda con el transporte?</label>
+                    <select name="transporte" id="select-transport">
+                        <option value="#">--</option>
+                        <option value="si">Si</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+                <div class="registration-div">
+                    <label for="formaDePago">Cuál seria el metodo de pago?</label>
+                    <select name="formaDePago" id="forma-de-pago" required>
+                        <option value="#">--</option>
+                        <option value="tarjeta debito">Tarjeta de debito</option>
+                        <option value="tarjeta credito">Tarjeta de credito</option>
+                        <option value="transferencia">Transferencia</option>
+                    </select>
+                </div>
+                <div class="registration-div btn-container">
+                    <button type="submit" class="btn-form" id="registration-btn"><a
+                            href="./confirmacao.html">Enviar</a></button>
+                    <button type="reset" class="btn-form">Borrar</button>
+                </div>
+            </form>
         </main>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
         crossorigin="anonymous"></script>
-    <script src="./main.js"></script>
+    <script src="../script/registration.js"></script>
 
 </body>
 
