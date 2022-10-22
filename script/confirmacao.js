@@ -5,6 +5,7 @@ const contenedor = document.querySelector("#info");
 const btnConfirmar = document.querySelector("#confirm-btn");
 const cancelarBtn = document.querySelector("#cancel-btn"); 
 const costoTotal = document.querySelector("#valor-total");
+const regScript = document.querySelector("#reg-tag");
 
 listaParticipantes.forEach(participante => {
     contenedor.innerHTML = `
@@ -32,4 +33,5 @@ btnConfirmar.addEventListener("click", () => {
 
 cancelarBtn.addEventListener("click", () => {
     localStorage.removeItem("participante");
+    regScript.setAttribute("src", "../script/registration.js");
 })
