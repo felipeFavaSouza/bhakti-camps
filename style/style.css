@@ -142,10 +142,13 @@ nav {
 
 .overlay img {
 	border-radius: 0 233px 233px 249px;
-	margin: 2rem 1.5rem 0 4rem;
-	border-right: 15px solid #57D9A6;
-	border-bottom: 15px solid #57D9A6;
+	margin: 4rem 2rem 2rem 5rem;
+	-webkit-box-shadow: 0px 5px 20px 30px rgba(0,0,0,0.16);
+	-moz-box-shadow: 0px 5px 20px 30px rgba(0,0,0,0.16);
+	box-shadow: 0px 5px 20px 30px rgba(0,0,0,0.16);
+	position: relative;
 }
+
 
 /* Upcoming events */
 
@@ -221,10 +224,6 @@ footer h2 {
 
 .registration-form {
 	margin-top: 3rem;
-}
-
-.registration-div {
-	margin: 0.5rem;
 }
 
 label {

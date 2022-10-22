@@ -3,14 +3,16 @@
 const allParticipants = JSON.parse(localStorage.getItem("participante")) || []; 
 let campCost = 2000;
 let transportServices = 1000;
-let userName = document.querySelector("#nombre");
-let userEmail = document.querySelector("#email");
-let userCountry = document.querySelector("#pais");
-let userCity = document.querySelector("#ciudad");
-let userAge = document.querySelector("#edad");
-let userTransport = document.querySelector("#select-transport");
-let userPayment = document.querySelector("#forma-de-pago");
-let sendBtn = document.querySelector("#registration-btn")
+const userName = document.querySelector("#nombre");
+const userEmail = document.querySelector("#email");
+const userCountry = document.querySelector("#pais");
+const userCity = document.querySelector("#ciudad");
+const userAge = document.querySelector("#edad");
+const userTransport = document.querySelector("#select-transport");
+const userPayment = document.querySelector("#forma-de-pago");
+const sendBtn = document.querySelector("#registration-btn");
+const form = document.querySelector(".registration-form")
+
 
 // Class constructora para registro de participantes
 
@@ -24,22 +26,15 @@ class Participant {
         this.paymentType = paymentType;
         this.transportationAssist = transportationAssist; 
     }
-    viewParticipant() {
-        if(this.transportationAssist == 'si'){
-            return `Recibimos el registro de Nombre: ${this.name} Email: ${this.email} Edad: ${this.age} Pais: ${this.country} Ciudad: ${this.city} Metodo Pago: ${this.paymentType}. Nuestro Equipo va ayudarlos con el transporte`; 
-        } else {
-            return `Recibimos el registro de Nombre: ${this.name} Email: ${this.email} Edad: ${this.age} Pais: ${this.country} Ciudad: ${this.city} Metodo Pago: ${this.paymentType}. Los padres se hacen cargo del transporte`;
-        }
-    }
     calculateTotal(){
         let totalCost = 0;
-        if(this.transportationAssist == 'si' && this.paymentType == 'tc'){
+        if(this.transportationAssist == 'si' && this.paymentType == 'tarjeta credito'){
             totalCost = `El costo total es $${campCost + transportServices * 1.15} incluye el recargo de 15% por pago con TC`; 
-        }else if(this.transportationAssist == 'si' && this.paymentType == 'td') {
+        }else if(this.transportationAssist == 'si' && this.paymentType == 'tarjeta debito') {
             totalCost = `El costo total es $${campCost + transportServices}`; 
-        }else if(this.transportationAssist == 'si' && this.paymentType == 'tr') {
+        }else if(this.transportationAssist == 'si' && this.paymentType == 'transferencia') {
             totalCost = `El costo total es $${campCost + transportServices}`; 
-        }else if(this.transportationAssist == 'no' && this.paymentType == 'tc') {
+        }else if(this.transportationAssist == 'no' && this.paymentType == 'tarjeta credito') {
             totalCost = `El costo total es $${campCost * 1.15} incluye el recargo de 15% por pago con TC`; 
         }else {
             totalCost = `El costo total es $${campCost}`; 

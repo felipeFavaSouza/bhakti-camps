@@ -66,18 +66,19 @@
 
             <h2 class="subtitle-main-style">Formulario de Inscripcion</h2>
             <form action="" class="registration-form container">
-                <div class="registration-div">
-                    <label for="nombre">Nombre completo:</label>
-                    <input type="text" name="nombre" id="nombre" size="40" required>
+                <div class="mb-3">
+                    <label for="nombre" class="form-label">Nombre completo:</label>
+                    <input type="text" class="form-control" aria-describedby="name" name="nombre" id="nombre" size="40"
+                        required>
                 </div>
-                <div class="registration-div">
-                    <label for="email">E-mail:</label>
-                    <input type="email" name="email" id="email" size="40" required>
+                <div class="mb-3">
+                    <label for="email" class="form-label">E-mail:</label>
+                    <input type="email" class="form-control" name="email" id="email" size="40" required>
                 </div>
-                <div class="registration-div">
-                    <label for="pais">Pais:</label>
-                    <select name="pais" id="pais" required>
-                        <option value="#">--</option>
+                <div class="mb-3">
+                    <label for="pais" class="form-label">Pais:</label>
+                    <select name="pais" id="pais" class="form-select" required>
+                        <option selected>Seleccione el Pais</option>
                         <option value="Argentina">Argentina</option>
                         <option value="Brasil">Brasil</option>
                         <option value="Bolivia">Bolivia</option>
@@ -87,26 +88,26 @@
                         <option value="Uruguay">Uruguay</option>
                     </select>
                 </div>
-                <div class="registration-div">
-                    <label for="ciudad">Ciudad:</label>
-                    <input type="text" name="ciudad" id="ciudad" size="20" required>
+                <div class="mb-3">
+                    <label for="ciudad" class="form-label">Ciudad:</label>
+                    <input type="text" name="ciudad" id="ciudad" size="20" class="form-control" required>
                 </div>
-                <div class="registration-div">
-                    <label for="edad">Edad:</label>
-                    <input type="number" name="edad" id="edad" size="10" required>
+                <div class="mb-3">
+                    <label for="edad" class="form-label">Edad:</label>
+                    <input type="number" class="form-control" name="edad" id="edad" size="10" required>
                 </div>
-                <div class="registration-div">
-                    <label for="transporte">Necesitara ayuda con el transporte?</label>
-                    <select name="transporte" id="select-transport">
-                        <option value="#">--</option>
+                <div class="mb-3">
+                    <label for="transporte" class="form-label">Necesitara ayuda con el transporte?</label>
+                    <select name="transporte" id="select-transport" class="form-select" required>
+                        <option selected>--</option>
                         <option value="si">Si</option>
                         <option value="no">No</option>
                     </select>
                 </div>
-                <div class="registration-div">
-                    <label for="formaDePago">Cuál seria el metodo de pago?</label>
-                    <select name="formaDePago" id="forma-de-pago" required>
-                        <option value="#">--</option>
+                <div class="mb-3">
+                    <label for="formaDePago" class="form-label">Cuál seria el metodo de pago?</label>
+                    <select name="formaDePago" id="forma-de-pago" class="form-select" required>
+                        <option selected>--</option>
                         <option value="tarjeta debito">Tarjeta de debito</option>
                         <option value="tarjeta credito">Tarjeta de credito</option>
                         <option value="transferencia">Transferencia</option>
