@@ -102,6 +102,10 @@ nav {
 	flex-direction: row;
 }
 
+.left-hero-section {
+	margin-left: 2rem;
+}
+
 .left-hero-section h2 {
 	color: #F6F6F8;
 	border-bottom: 1px solid #57D9A6;
@@ -136,10 +140,6 @@ nav {
 	color: #1C1C33;
 }
 
-.right-hero-section {
-	display: flex;
-}
-
 .overlay img {
 	border-radius: 0 233px 233px 249px;
 	margin: 4rem 2rem 2rem 5rem;
@@ -163,11 +163,12 @@ nav {
 }
 
 .events {
-	display: flex;
-	flex-direction: row;
-	gap: 1rem;
 	margin-top: 3rem;
-	
+	justify-content: center;
+}
+
+.row {
+	gap: 0.5rem;
 }
 
 .new-event {
@@ -176,6 +177,7 @@ nav {
 	background-color: #F6F6F8;
 	color: #1C1C33;
 	border-radius: 15px 15px 15px 15px;
+	padding: 0;
 }
 
 .new-event img{
@@ -186,7 +188,7 @@ nav {
 
 .new-event p {
 	margin-top: 1.5rem;
-	padding: 0.8em;
+	padding: 0.9em;
 }
 
 .new-event button {
@@ -210,7 +212,7 @@ nav {
 }
 
 .testimonials p {
-	padding: 0.5em;
+	padding: 0.8em;
 	margin-top: 3rem;
 }
 /* Footer styling */
@@ -218,9 +220,10 @@ nav {
 footer h2 {
 	color: #F6F6F8;
 	margin-top: 3rem;
+	background-color: #1C1C33;
 }
 
-/* Inscricao */ 
+/* Inscripcion */ 
 
 .registration-form {
 	margin-top: 3rem;
@@ -254,7 +257,27 @@ label {
 	color: #1C1C33;
 }
 
-/* Pagina de Confirmacao */
+/* Form validation style*/
+
+.input-control input:focus {
+	outline: 0;
+}
+
+.form-control.success {
+	border-color: #09c372;
+}
+
+.form-control.error {
+	border-color: #ff3860;
+}
+
+.input-control .error {
+	color: #ff3860;
+	font-size: 9px;
+	height: 13px;
+}
+
+/* Pagina de Confirmacion */
 
 #info-container {
 	color: #1C1C33;
@@ -269,3 +292,59 @@ label {
 .confirm-btn {
 	margin: 2rem 0 1rem 1rem;
 }
+
+/* Estilos Sobre */
+
+.sobre-body {
+	background-color: #F6F6F8;
+}
+
+.top-div {
+	max-width: 90%;
+	height: 276px;
+	background-color: #1C1C33;
+	margin-top: 4rem;
+	margin-left: 5%;
+}
+
+.sobre-txt {
+	background-color: white;
+	margin-top: 2rem;
+	margin-left: 5%;
+}
+
+.sobre-txt p {
+	padding: 0.8rem;
+	padding-bottom: 1rem;
+}
+
+.sobre-subtitle {
+	font-size: 20px;
+	margin: 2rem 0 1rem 0.8rem;
+	border-bottom: 1px solid #57D9A6;
+	width: 200px;
+	text-align: center;
+	padding-bottom: 0.5rem;
+}
+
+.green-div {
+	background-color: #57D9A6;
+	height: 432.19px;
+	width: 252px;
+	margin-top: 2rem;
+	margin-left: 1rem;
+}
+
+/* Estilos confirmacion */
+
+.valor-confirmacion {
+	margin-top: 1rem;
+	font-size: 20px;
+}
+
+/*Admin page*/
+
+#participantes-div {
+	background-color: #F6F6F8;
+}
+
