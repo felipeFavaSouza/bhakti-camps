@@ -9,6 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <link rel="stylesheet" href="../style/style.css">
+    <script src="https://kit.fontawesome.com/6143247509.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -57,6 +58,9 @@
                             </a>
                         </div>
                     </div>
+                    <div class="admin-icon-container">
+                        <a href="./admin.html"><i class="fa-solid fa-user"></i></a>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -70,13 +74,49 @@
                 <p id="valor-total">
 
                 </p>
-                <button class="btn-form confirm-btn" id="confirm-btn" type="button">Confirmar</button>
+                <button class="btn-form confirm-btn" id="confirm-btn" type="button" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal">Confirmar</button>
                 <button class="btn-form confirm-btn" id="cancel-btn" type="button"><a
                         href="./registro.html">Cancelar</a></button>
             </div>
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Realizar Pago</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="cardNum" class="form-label payment-label">Numero Tarjeta</label>
+                                    <input type="number" class="form-control" id="cardNum" aria-describedby="cardNum"
+                                        minlength="16" maxlength="16" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="paymentName" class="form-label payment-label">Nombre Completo</label>
+                                    <input type="text" class="form-control" id="paymentName" required>
+                                </div>
+                                <div class="paymentCost-div">
+                                    <p id="paymentCost"></p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="submit" class="btn btn-success" id="paymentBtn">Pagar</button>
+                                    <button type="button" class="btn btn-danger"
+                                        data-bs-dismiss="modal">Cancelar</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </main>
     </div>
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
     <script src="../script/registration.js"></script>
     <script src="../script/confirmacion.js"></script>
 </body>

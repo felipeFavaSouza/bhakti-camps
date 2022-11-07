@@ -95,6 +95,12 @@ nav {
 	transform: scale(1.15);
 }
 
+.admin-icon-container i {
+    max-width: 32px;
+    max-height: 32px;
+	color: #F6F6F8;
+}
+
 /* Hero styling */
 
 .hero {
@@ -263,15 +269,15 @@ label {
 	outline: 0;
 }
 
-.form-control.success {
+.input-control.success input{
 	border-color: #09c372;
 }
 
-.form-control.error {
+.input-control.error input{
 	border-color: #ff3860;
 }
 
-.input-control .error {
+.input-control .error{
 	color: #ff3860;
 	font-size: 9px;
 	height: 13px;
@@ -291,6 +297,10 @@ label {
 
 .confirm-btn {
 	margin: 2rem 0 1rem 1rem;
+}
+
+.payment-label {
+	color: #1C1C33;
 }
 
 /* Estilos Sobre */
@@ -348,3 +358,6 @@ label {
 	background-color: #F6F6F8;
 }
 
+#btn-admin {
+	margin: 2rem;
+}
