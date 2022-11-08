@@ -12,7 +12,6 @@ const userTransport = document.querySelector("#select-transport");
 const userPayment = document.querySelector("#forma-de-pago");
 const sendBtn = document.querySelector("#registration-btn");
 const resetBtn = document.querySelector("#reset-btn");
-const form = document.querySelector(".registration-form")
 
 
 
@@ -53,9 +52,8 @@ const newParticipant = () => {
 
 // Evento que ejecuta la funcion anterior
 
-
 sendBtn?.addEventListener("click", () => {
-    newParticipant()
+    newParticipant();
 });
 
 resetBtn?.addEventListener("click", () => {
@@ -63,4 +61,4 @@ resetBtn?.addEventListener("click", () => {
         title: 'Datos borrados!',
         icon: 'error'
     })
-})
+});
