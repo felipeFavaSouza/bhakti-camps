@@ -21,8 +21,6 @@ const calculateTotal = () => {
             totalCost = `Total: R$${campCost + transportServices * 1.15} incluye el recargo de 15% por pago con Tarjeta de credito`; 
         }else if(participante.transportationAssist == 'si' && participante.paymentType == 'tarjeta debito') {
             totalCost = `Total: R$${campCost + transportServices}`; 
-        }else if(participante.transportationAssist == 'si' && participante.paymentType == 'transferencia') {
-            totalCost = `Total: R$${campCost + transportServices}`; 
         }else if(participante.transportationAssist == 'no' && participante.paymentType == 'tarjeta credito') {
             totalCost = `Total: R$${campCost * 1.15} incluye el recargo de 15% por pago con Tarjeta de credito`; 
         }else {
@@ -70,6 +68,9 @@ const setSuccess = (element) => {
     validar ++;
 };
 
+const getlength = number => {
+    return number.toString().length;
+}
 
 //funcion de validacion de datos 
 
@@ -84,13 +85,10 @@ const validateInputs = () => {
     }
 
     if(numeroTarjeta == ''){
-        setError(cardNum, 'Edad es obligatoria');
-    }else if(numeroTarjeta < 16) {
-        setError(cardNum, 'Numero invalido, debe contener 16 digitos');
-    }else if(numeroTarjeta > 16) {
-        setError(cardNum, 'Numero invalido, debe contener 16 digitos')
-    }
-    else {
+        setError(cardNum, 'Dato Obligatorio');
+    }else if(getlength(numeroTarjeta) < 16 || getlength(numeroTarjeta) > 16){
+        setError(cardNum, 'Numero invalido, debe contener 16 digitos.');
+    }else {
         setSuccess(cardNum);
     }
 
