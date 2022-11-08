@@ -79,6 +79,8 @@
                 <button class="btn-form confirm-btn" id="cancel-btn" type="button"><a
                         href="./registro.html">Cancelar</a></button>
             </div>
+
+            <!-- Modal que recibe datos de pago -->
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
                 aria-hidden="true">
                 <div class="modal-dialog">
@@ -88,15 +90,21 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <form>
-                                <div class="mb-3">
+                            <form id="payment-form">
+                                <div class="mb-3 input-control">
                                     <label for="cardNum" class="form-label payment-label">Numero Tarjeta</label>
                                     <input type="number" class="form-control" id="cardNum" aria-describedby="cardNum"
-                                        minlength="16" maxlength="16" required>
+                                        required>
+                                    <div class="error">
+
+                                    </div>
                                 </div>
-                                <div class="mb-3">
+                                <div class="mb-3 input-control">
                                     <label for="paymentName" class="form-label payment-label">Nombre Completo</label>
                                     <input type="text" class="form-control" id="paymentName" required>
+                                    <div class="error">
+
+                                    </div>
                                 </div>
                                 <div class="paymentCost-div">
                                     <p id="paymentCost"></p>
@@ -111,6 +119,7 @@
                     </div>
                 </div>
             </div>
+            <!-- Fin de modal -->
         </main>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
