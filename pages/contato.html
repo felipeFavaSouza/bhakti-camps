@@ -35,7 +35,7 @@
                             <a class="nav-link" href="./equipe.html">Equipe</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./registro.html">Inscripcion</a>
+                            <a class="nav-link" href="./registro.html">Inscrição</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="./contato.html">Contato</a>
@@ -67,7 +67,29 @@
         </nav>
 
         <main>
+            <form method="POST" name="contact" class="registration-form container" data-netlify="true">
+                <div class="mb-3">
+                    <label for="nombre" class="form-label">Nome Completo:</label>
+                    <input type="text" class="form-control" aria-describedby="name" name="nombre" id="nombre" size="40"
+                        required>
 
+                </div>
+                <div class="mb-3">
+                    <label for="email-contact" class="form-label">E-mail:</label>
+                    <input type="email" class="form-control" name="email" id="email-contact" size="40" required>
+
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Menssagem:</label>
+                    <input type="text" class="form-control" name="message" id="message" size="40" required>
+
+                </div>
+                <div class="registration-div btn-container">
+                    <button type="submit" class="btn-form" id="contact-btn"><a
+                            href="./confirmacao.html">Enviar</a></button>
+                    <button type="reset" id="contact-reset-btn" class="btn-form">Borrar</button>
+                </div>
+            </form>
         </main>
     </div>
 

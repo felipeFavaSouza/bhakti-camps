@@ -220,6 +220,7 @@ nav {
 .testimonials p {
 	padding: 0.8em;
 	margin-top: 3rem;
+	font-style: italic;
 }
 /* Footer styling */
 
@@ -300,7 +301,6 @@ label {
 .sobre-txt {
 	background-color: white;
 	margin-top: 2rem;
-	margin-left: 5%;
 }
 
 .sobre-txt p {
@@ -315,14 +315,6 @@ label {
 	width: 200px;
 	text-align: center;
 	padding-bottom: 0.5rem;
-}
-
-.green-div {
-	background-color: #57D9A6;
-	height: 432.19px;
-	width: 252px;
-	margin-top: 2rem;
-	margin-left: 1rem;
 }
 
 /* Estilos confirmacion */
