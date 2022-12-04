@@ -59,9 +59,6 @@
                             </a>
                         </div>
                     </div>
-                    <div class="admin-icon-container">
-                        <a href="./admin.html"><i class="fa-solid fa-user"></i></a>
-                    </div>
                 </div>
             </div>
         </nav>
@@ -69,67 +66,101 @@
         <main>
 
             <h2 class="subtitle-main-style">Formulario de Inscrição</h2>
-            <form action="" class="registration-form container">
-                <div class="mb-3">
-                    <label for="nombre" class="form-label">Nome Completo:</label>
-                    <input type="text" class="form-control" aria-describedby="name" name="nombre" id="nombre" size="40"
-                        required>
 
-                </div>
-                <div class="mb-3">
-                    <label for="email" class="form-label">E-mail:</label>
-                    <input type="email" class="form-control" name="email" id="email" size="40" required>
-
-                </div>
-                <div class="mb-3">
-                    <label for="pais" class="form-label">Pais:</label>
-                    <select name="pais" id="pais" class="form-select">
-                        <option selected>Seleccione el Pais</option>
-                        <option value="Argentina">Argentina</option>
-                        <option value="Brasil">Brasil</option>
-                        <option value="Bolivia">Bolivia</option>
-                        <option value="Chile">Chile</option>
-                        <option value="Colombia">Colombia</option>
-                        <option value="Paraguay">Paraguay</option>
-                        <option value="Uruguay">Uruguay</option>
-                    </select>
-
-                </div>
-                <div class="mb-3">
-                    <label for="ciudad" class="form-label">Ciudad:</label>
-                    <input type="text" name="ciudad" id="ciudad" size="20" class="form-control" required>
-
-                </div>
-                <div class="mb-3">
-                    <label for="edad" class="form-label">Edad:</label>
-                    <input type="number" class="form-control" name="edad" id="edad" size="10" required>
-
-                </div>
-                <div class="mb-3">
-                    <label for="transporte" class="form-label">Necesitara ayuda con el transporte?</label>
-                    <select name="transporte" id="select-transport" class="form-select" required>
-                        <option selected>--</option>
-                        <option value="si">Si</option>
-                        <option value="no">No</option>
-                    </select>
-
-                </div>
-                <div class="mb-3">
-                    <label for="formaDePago" class="form-label">Cuál seria el metodo de pago?</label>
-                    <select name="formaDePago" id="forma-de-pago" class="form-select" required>
-                        <option selected>--</option>
-                        <option value="tarjeta debito">Tarjeta de debito</option>
-                        <option value="tarjeta credito">Tarjeta de credito</option>
-                    </select>
-
-                </div>
-                <div class="registration-div btn-container">
-                    <button type="submit" class="btn-form" id="registration-btn"><a
-                            href="./confirmacao.html">Enviar</a></button>
-                    <button type="reset" id="reset-btn" class="btn-form">Borrar</button>
-                </div>
-            </form>
+            <!-- formulario do jotform incorporado -->
+            <iframe id="JotFormIFrame-223374565223657" title="Inscrição RKC 2023" onload="window.parent.scrollTo(0,0)"
+                allowtransparency="true" allowfullscreen="true" allow="geolocation; microphone; camera"
+                src="https://form.jotform.com/223374565223657" frameborder="0" style="
+    min-width: 100%;
+    height:539px;
+    border:none;" scrolling="no">
+            </iframe>
+            <script type="text/javascript">
+                var ifr = document.getElementById("JotFormIFrame-223374565223657");
+                if (ifr) {
+                    var src = ifr.src;
+                    var iframeParams = [];
+                    if (window.location.href && window.location.href.indexOf("?") > -1) {
+                        iframeParams = iframeParams.concat(window.location.href.substr(window.location.href.indexOf("?") + 1).split('&'));
+                    }
+                    if (src && src.indexOf("?") > -1) {
+                        iframeParams = iframeParams.concat(src.substr(src.indexOf("?") + 1).split("&"));
+                        src = src.substr(0, src.indexOf("?"))
+                    }
+                    iframeParams.push("isIframeEmbed=1");
+                    ifr.src = src + "?" + iframeParams.join('&');
+                }
+                window.handleIFrameMessage = function (e) {
+                    if (typeof e.data === 'object') { return; }
+                    var args = e.data.split(":");
+                    if (args.length > 2) { iframe = document.getElementById("JotFormIFrame-" + args[(args.length - 1)]); } else { iframe = document.getElementById("JotFormIFrame"); }
+                    if (!iframe) { return; }
+                    switch (args[0]) {
+                        case "scrollIntoView":
+                            iframe.scrollIntoView();
+                            break;
+                        case "setHeight":
+                            iframe.style.height = args[1] + "px";
+                            break;
+                        case "collapseErrorPage":
+                            if (iframe.clientHeight > window.innerHeight) {
+                                iframe.style.height = window.innerHeight + "px";
+                            }
+                            break;
+                        case "reloadPage":
+                            window.location.reload();
+                            break;
+                        case "loadScript":
+                            if (!window.isPermitted(e.origin, ['jotform.com', 'jotform.pro'])) { break; }
+                            var src = args[1];
+                            if (args.length > 3) {
+                                src = args[1] + ':' + args[2];
+                            }
+                            var script = document.createElement('script');
+                            script.src = src;
+                            script.type = 'text/javascript';
+                            document.body.appendChild(script);
+                            break;
+                        case "exitFullscreen":
+                            if (window.document.exitFullscreen) window.document.exitFullscreen();
+                            else if (window.document.mozCancelFullScreen) window.document.mozCancelFullScreen();
+                            else if (window.document.mozCancelFullscreen) window.document.mozCancelFullScreen();
+                            else if (window.document.webkitExitFullscreen) window.document.webkitExitFullscreen();
+                            else if (window.document.msExitFullscreen) window.document.msExitFullscreen();
+                            break;
+                    }
+                    var isJotForm = (e.origin.indexOf("jotform") > -1) ? true : false;
+                    if (isJotForm && "contentWindow" in iframe && "postMessage" in iframe.contentWindow) {
+                        var urls = { "docurl": encodeURIComponent(document.URL), "referrer": encodeURIComponent(document.referrer) };
+                        iframe.contentWindow.postMessage(JSON.stringify({ "type": "urls", "value": urls }), "*");
+                    }
+                };
+                window.isPermitted = function (originUrl, whitelisted_domains) {
+                    var url = document.createElement('a');
+                    url.href = originUrl;
+                    var hostname = url.hostname;
+                    var result = false;
+                    if (typeof hostname !== 'undefined') {
+                        whitelisted_domains.forEach(function (element) {
+                            if (hostname.slice((-1 * element.length - 1)) === '.'.concat(element) || hostname === element) {
+                                result = true;
+                            }
+                        });
+                        return result;
+                    }
+                };
+                if (window.addEventListener) {
+                    window.addEventListener("message", handleIFrameMessage, false);
+                } else if (window.attachEvent) {
+                    window.attachEvent("onmessage", handleIFrameMessage);
+                }
+            </script>
+            <!-- Fim do formulario do jotform incorporado -->
         </main>
+        <footer>
+            <h2>Uma produção de:</h2>
+            <img src="../images/dharmaSevaLogo.jpg" alt="Logo de Dharma Seva">
+        </footer>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -137,6 +168,7 @@
         integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
         crossorigin="anonymous"></script>
     <script src="../script/registration.js"></script>
+    <script type="text/javascript" src="https://form.jotform.com/jsform/213504424972050"></script>
 
 </body>
 

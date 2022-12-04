@@ -224,13 +224,27 @@ nav {
 }
 /* Footer styling */
 
-footer h2 {
-	color: #F6F6F8;
+footer {
 	margin-top: 3rem;
 	background-color: #1C1C33;
 }
 
+footer h2 {
+	color: #F6F6F8;
+	margin-left: 1rem;
+}
+
+footer img {
+	width: 100px;
+	height: 100px;
+	margin: 1rem;
+}
+
 /* Inscripcion */ 
+
+iframe {
+	margin-top: 2rem;
+}
 
 .registration-form {
 	margin-top: 3rem;
@@ -286,25 +300,16 @@ label {
 
 /* Estilos Sobre */
 
-.sobre-body {
-	background-color: #F6F6F8;
-}
-
-.top-div {
-	max-width: 90%;
-	height: 276px;
-	background-color: #1C1C33;
-	margin-top: 4rem;
-	margin-left: 5%;
-}
 
 .sobre-txt {
-	background-color: white;
+	background-color: #F6F6F8;
 	margin-top: 2rem;
+	margin-bottom: 2rem;
+	border-radius: 5px 5px 5px 5px;
 }
 
 .sobre-txt p {
-	padding: 0.8rem;
+	padding: 0.9rem;
 	padding-bottom: 1rem;
 }
 
@@ -344,12 +349,64 @@ label {
 	height: 13px;
 }
 
-/*Admin page*/
+/* Estilos equipe */
 
-#participantes-div {
+.equipe-body {
 	background-color: #F6F6F8;
 }
 
-#btn-admin {
-	margin: 2rem;
+.equipe-top-div {
+	background-color: #1C1C33;
+	height: 100px;
+}
+
+.equipe-title {
+	font-size: 20px;
+	margin: 2rem 0 1rem 0.8rem;
+	width: 250px;
+	text-align: center;
+	padding: 2rem 0 0.5rem 0;
+	color: #F6F6F8;
+}
+
+.equipe-subtitle-container{
+	background-color: #09c372;
+	max-width: 230px;
+	margin: 2rem 0 1rem 2rem;
+}
+
+.equipe-subtitle{
+	font-size: 18px;
+	padding: 0.5rem;
+	color: #F6F6F8;
+}
+
+.equipe-article{
+	background-color: #09c372;
+	height: 100px;
+	margin-top: 15px;
+}
+
+.equipe-article p{
+	padding-top: 0.5rem;
+	color: #F6F6F8;
+}
+
+.equipe-article h3{
+	padding-top: 0.5rem;
+	color: #F6F6F8;
+}
+
+.equipe-fotos{
+	margin: 10px 10px 0 0;
+	height: 120px;
+	width: 150px;
+}
+
+.equipe-foto-div{
+	max-width:200px;
+}
+
+.equipe-row-div{
+	margin-left: 2rem;
 }
